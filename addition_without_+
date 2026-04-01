@@ -1,0 +1,21 @@
+def add_without_plus(a, b):
+    while b != 0:
+        # 1. Find the carry bits
+        carry = a & b
+        # 2. Add bits without carrying
+        a = a ^ b
+        # 3. Shift carry to the left
+        b = carry << 1
+    return a
+
+print(add_without_plus(15, 27))  # Output: 42
+
+
+#  Operator Name 	Symbol	Python Example (a=10,b=4)
+
+# Bitwise AND	&	a & b (Result: 0)
+# Bitwise OR	|	a | b (Result: 14)
+# Bitwise XOR	^	a ^ b (Result: 14)
+# Bitwise NOT	~	~a (Result: -11)
+# Bitwise Left Shift	<<	a << 1 (Result: 20)
+# Bitwise Right Shift	>>	a >> 1 (Result: 5)
