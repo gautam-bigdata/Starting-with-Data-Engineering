@@ -8,12 +8,12 @@ This repo documents my step-by-step learning path in Data Engineering, covering 
 If you're someone curious about how data flows, transforms, and powers analytics — you're in the right place.
 
 What You'll Learn
-🔹 Core Concepts
-    Data Engineering Fundamentals
-    Data Warehousing vs Data Lakes
-    ETL vs ELT Pipelines
-    Batch vs Real-Time Processing
-    Data Modeling Basics
+🔹 Core Concepts \n 
+    Data Engineering Fundamentals \n
+    Data Warehousing vs Data Lakes \n
+    ETL vs ELT Pipelines \n 
+    Batch vs Real-Time Processing \n 
+    Data Modeling Basics 
 
 Technologies & Tools
 
