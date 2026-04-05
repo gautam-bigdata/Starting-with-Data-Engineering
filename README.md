@@ -1,28 +1,37 @@
-# Starting-with-Data-Engineering
-Getting started with the Data Engineering, learning about data engineering tools and technology, Covering topics like Data Warehouse, Data Lakes, Analytics Engineering etc, Using techs like Kafka, DBT, Apache Spark, etc . Then at last will create a live project
+Data Engineering Journey: From Basics to Production
 
+Welcome to my Data Engineering Learning Repository — a hands-on journey where I explore, build, and implement modern data engineering concepts and tools from scratch to real-world projects.
 
+About This Repository
 
-PS C:\Users\gopal\OneDrive\Documents\GitHub\Starting-with-Data-Engineering> function prompt { "$(Split-Path -Leaf (Get-Location)) > " }
-Starting-with-Data-Engineering > code $PROFILE
-Starting-with-Data-Engineering > . $PROFILE
-. : File C:\Users\gopal\OneDrive\Documents\WindowsPowerShell\Microsoft.PowerShe
-ll_profile.ps1 cannot be loaded because running scripts is disabled on this 
-system. For more information, see about_Execution_Policies at 
-https:/go.microsoft.com/fwlink/?LinkID=135170.
-At line:1 char:3
-+ . $PROFILE
-+   ~~~~~~~~
-    + CategoryInfo          : SecurityError: (:) [], PSSecurityException
-    + FullyQualifiedErrorId : UnauthorizedAccess
+This repo documents my step-by-step learning path in Data Engineering, covering everything from foundational concepts to building a complete, production-style data pipeline.
+If you're someone curious about how data flows, transforms, and powers analytics — you're in the right place.
 
-Starting-with-Data-Engineering > Get-ExecutionPolicy -Scope CurrentUser
-Undefined
+What You'll Learn
+🔹 Core Concepts
+    Data Engineering Fundamentals
+    Data Warehousing vs Data Lakes
+    ETL vs ELT Pipelines
+    Batch vs Real-Time Processing
+    Data Modeling Basics
 
-Starting-with-Data-Engineering > Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+Technologies & Tools
 
-Starting-with-Data-Engineering > Get-ExecutionPolicy -Scope CurrentUser
-RemoteSigned
+This repository includes practical implementations using:
 
-Starting-with-Data-Engineering > . $PROFILE
-Starting-with-Data-Engineering > 
+⚡ Apache Kafka – Real-time data streaming
+🔥 Apache Spark – Distributed data processing
+🛠️ dbt (Data Build Tool) – Analytics engineering & transformations
+🗄️ SQL & Data Warehousing tools
+
+Final Project (Coming Soon)
+
+At the end of this journey, I will build a complete end-to-end data pipeline, which will include:
+
+Real-time data ingestion using Kafka
+Data processing with Spark
+Transformation using dbt
+Storage in a Data Warehouse
+Dashboard-ready datasets
+
+Stay tuned 👀
