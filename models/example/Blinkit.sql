@@ -1,46 +1,32 @@
 
 WITH CUSTOMER_DS AS (
-    SELECT 
-        CUSTOMER_ID,
-        AREA,
-        CUSTOMER_SEGMENT,
-        TOTAL_ORDERS,
-        AVG_ORDER_VALUE
-    FROM 
-        raw.blinkit_dataset.customers_data
+    SELECT * FROM {{ ref('blinkit_Customers') }} 
 ),
 
 ORDERS_DS AS (
-    SELECT 
-        ORDER_ID,
-        CUSTOMER_ID,
-        ORDER_DATE,
-        DELIVERY_STATUS,
-        ORDER_TOTAL,
-        PAYMENT_METHOD
-    FROM 
-        raw.blinkit_dataset.orders
+    SELECT * FROM {{ ref('blinkit_orders') }}
 ),
 
 CUS_FEEDBACK AS (
-    SELECT 
-        FEEDBACK_ID,
-        ORDER_ID,
-        CUSTOMER_ID,
-        RATING,
-        FEEDBACK_CATEGORY,
-        SENTIMENT,
-        FEEDBACK_DATE
-    FROM 
-        raw.blinkit_dataset.customer_feedback
-)
+    select * from {{ ref('blinkit_cus_feedback') }}  
+),
 
 DELIVERY_PERFORMANCE AS (
-    SELECT 
-        ORDER_ID,
-        DELIVERY_TIME_MINUTES,
-        DISTANCE_KM,
-        DELIVERY_STATUS
-    FROM 
-        raw.blinkit_dataset.delivery_performance
+    select * from {{ ref('blinkit_delivery_performance') }}    
 )
+select 
+    CUSTOMER_DS.customer_id,
+    CUSTOMER_DS.area,
+    CUSTOMER_DS.total_orders,
+    CUSTOMER_DS.avg_order_value,
+    ORDERS_DS.delivery_status,
+    ORDERS_DS.order_total,
+    ORDERS_DS.payment_method
+from
+    CUSTOMER_DS, ORDERS_DS
+where 
+    CUSTOMER_DS.customer_id = ORDERS_DS.customer_id
+order by 
+    total_orders desc,
+    order_total desc,
+    avg_order_value desc
