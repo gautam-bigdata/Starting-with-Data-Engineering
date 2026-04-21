@@ -1,1 +1,2 @@
 Added new lineage but using the __ref command[ command is used to access the sql quey from another table ]<br>
+Started for the Snowpro certification
