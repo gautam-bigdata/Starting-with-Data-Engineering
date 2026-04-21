@@ -1,0 +1,9 @@
+SELECT 
+        ORDER_ID,
+        CUSTOMER_ID,
+        ORDER_DATE,
+        DELIVERY_STATUS,
+        ORDER_TOTAL,
+        PAYMENT_METHOD
+    FROM 
+        raw.blinkit_dataset.orders

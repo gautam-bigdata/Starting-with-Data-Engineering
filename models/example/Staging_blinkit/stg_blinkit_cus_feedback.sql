@@ -1,0 +1,10 @@
+SELECT 
+        FEEDBACK_ID,
+        ORDER_ID,
+        CUSTOMER_ID,
+        RATING,
+        FEEDBACK_CATEGORY,
+        SENTIMENT,
+        FEEDBACK_DATE
+    FROM 
+        raw.blinkit_dataset.customer_feedback
