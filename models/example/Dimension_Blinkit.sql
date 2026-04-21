@@ -1,18 +1,18 @@
 
 WITH CUSTOMER_DS AS (
-    SELECT * FROM {{ ref('stg_blinkit_Customersmers') }} 
+    SELECT * FROM {{ ref('stg_blinkit_Customers') }} 
 ),
 
 ORDERS_DS AS (
-    SELECT * FROM {{ ref('stg_blinkit_ordersders') }}
+    SELECT * FROM {{ ref('stg_blinkit_orders') }}
 ),
 
 CUS_FEEDBACK AS (
-    select * from {{ ref('stg_blinkit_cus_feedbackback') }}  
+    select * from {{ ref('stg_blinkit_cus_feedback') }}  
 ),
 
 DELIVERY_PERFORMANCE AS (
-    select * from {{ ref('stg_blinkit_delivery_performanceance') }}    
+    select * from {{ ref('stg_blinkit_delivery_performance') }}    
 )
 select 
     CUSTOMER_DS.customer_id,
