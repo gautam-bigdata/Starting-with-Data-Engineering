@@ -1,6 +1,6 @@
 
 WITH CUSTOMER_DS AS (
-    SELECT * FROM {{ ref('stg_blinkit_Customers') }} 
+    SELECT * FROM {{ ref('stg_blinkit_customers') }} 
 ),
 
 ORDERS_DS AS (
