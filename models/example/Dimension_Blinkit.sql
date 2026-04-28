@@ -30,3 +30,4 @@ order by
     total_orders desc,
     order_total desc,
     avg_order_value desc
+
